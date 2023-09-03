@@ -68,29 +68,33 @@
             <button class="counterButton decrement">Decrement</button>
             <button class="counterButton increment">Increment</button>
         </div>
-        <script>
-            const buttons = document.querySelectorAll('.counterButton');
-            let counter = 0;
-            buttons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    if (button.classList.contains('decrement')) {
-                        counter--;
-                    } else if (button.classList.contains('increment')) {
-                        counter++;
-                    }
-                    const count = document.querySelector('#counter');
-                    count.textContent = counter;
-                    if (counter < 0) {
-                        count.style.color = 'red';
-                    } else if (counter > 0) {
-                        count.style.color = 'green';
-                    } else {
-                        count.style.color = 'black'
-                    }
-                })
-            })();
-        </script>
+       
     </div>
+    <footer class="container">
+        <p>© TODO list By Hamza, Inc. </a></p>
+    </footer>
+    <script>
+        const buttons = document.querySelectorAll('.counterButton');
+        let counter = 0;
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                if (button.classList.contains('decrement')) {
+                    counter--;
+                } else if (button.classList.contains('increment')) {
+                    counter++;
+                }
+                const count = document.querySelector('#counter');
+                count.textContent = counter;
+                if (counter < 0) {
+                    count.style.color = 'red';
+                } else if (counter > 0) {
+                    count.style.color = 'green';
+                } else {
+                    count.style.color = 'black'
+                }
+            })
+        })();
+    </script>
 </body>
 
 </html>
